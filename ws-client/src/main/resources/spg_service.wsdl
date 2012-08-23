@@ -1,0 +1,2210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by hukun (huawei) -->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:spg="http://www.huawei.com/SPG2800/V100R002C03" targetNamespace="http://www.huawei.com/SPG2800/V100R002C03">
+	<wsdl:import namespace="http://www.huawei.com/SPG2800/V100R002C03" location="spg_schema.xsd"/>
+	<wsdl:types>
+		<xs:schema targetNamespace="http://new.webservice.namespace" elementFormDefault="qualified"/>
+	</wsdl:types>
+	<wsdl:message name="ResendFlagHeader">
+		<wsdl:part name="header" element="spg:ResendFlag"/>
+	</wsdl:message>
+	<wsdl:message name="ActCFBRequest">
+		<wsdl:part name="body" element="spg:ActCFBRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ActCFDARequest">
+		<wsdl:part name="body" element="spg:ActCFDARequest"/>
+	</wsdl:message>
+	<wsdl:message name="ActCFSRequest">
+		<wsdl:part name="body" element="spg:ActCFSRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ActCFURequest">
+		<wsdl:part name="body" element="spg:ActCFURequest"/>
+	</wsdl:message>
+	<wsdl:message name="ActCFVMRequest">
+		<wsdl:part name="body" element="spg:ActCFVMRequest"/>
+	</wsdl:message>
+	<wsdl:message name="SetOWSBRRequest">
+		<wsdl:part name="body" element="spg:SetOWSBRRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ActPreProvRequest">
+		<wsdl:part name="body" element="spg:ActPreProvRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ActSCRRequest">
+		<wsdl:part name="body" element="spg:ActSCRRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ActSnowBirdRequest">
+		<wsdl:part name="body" element="spg:ActSnowBirdRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ActSpeedDialRequest">
+		<wsdl:part name="body" element="spg:ActSpeedDialRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ActTNRequest">
+		<wsdl:part name="body" element="spg:ActTNRequest"/>
+	</wsdl:message>
+	<wsdl:message name="AddPreProvDev2SubRequest">
+		<wsdl:part name="body" element="spg:AddPreProvDev2SubRequest"/>
+	</wsdl:message>
+	<wsdl:message name="AddTN2DeviceRequest">
+		<wsdl:part name="body" element="spg:AddTN2DeviceRequest"/>
+	</wsdl:message>
+	<wsdl:message name="AddTN2IRSRequest">
+		<wsdl:part name="body" element="spg:AddTN2IRSRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCDVRequest">
+		<wsdl:part name="body" element="spg:DeactCDVRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCFBRequest">
+		<wsdl:part name="body" element="spg:DeactCFBRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCFDARequest">
+		<wsdl:part name="body" element="spg:DeactCFDARequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCFSRequest">
+		<wsdl:part name="body" element="spg:DeactCFSRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCFURequest">
+		<wsdl:part name="body" element="spg:DeactCFURequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCFVMRequest">
+		<wsdl:part name="body" element="spg:DeactCFVMRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeactSCRRequest">
+		<wsdl:part name="body" element="spg:DeactSCRRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeactSnowBirdRequest">
+		<wsdl:part name="body" element="spg:DeactSnowBirdRequest"/>
+	</wsdl:message>
+	<wsdl:message name="SetNPSSBRRequest">
+		<wsdl:part name="body" element="spg:SetNPSSBRRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeactSpeedDialRequest">
+		<wsdl:part name="body" element="spg:DeactSpeedDialRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeactTNRequest">
+		<wsdl:part name="body" element="spg:DeactTNRequest"/>
+	</wsdl:message>
+	<wsdl:message name="PreProvRequest">
+		<wsdl:part name="body" element="spg:PreProvRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCFBRequest">
+		<wsdl:part name="body" element="spg:QueryCFBRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCFDARequest">
+		<wsdl:part name="body" element="spg:QueryCFDARequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCFSRequest">
+		<wsdl:part name="body" element="spg:QueryCFSRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCFURequest">
+		<wsdl:part name="body" element="spg:QueryCFURequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryESRNRequest">
+		<wsdl:part name="body" element="spg:QueryESRNRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QuerySCRRequest">
+		<wsdl:part name="body" element="spg:QuerySCRRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QuerySpeedDialRequest">
+		<wsdl:part name="body" element="spg:QuerySpeedDialRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QuerySubRequest">
+		<wsdl:part name="body" element="spg:QuerySubRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryBARRequest">
+		<wsdl:part name="body" element="spg:QueryBARRequest"/>
+	</wsdl:message>
+	<wsdl:message name="RmvDeviceRequest">
+		<wsdl:part name="body" element="spg:RmvDeviceRequest"/>
+	</wsdl:message>
+	<wsdl:message name="SwapTNRequest">
+		<wsdl:part name="body" element="spg:SwapTNRequest"/>
+	</wsdl:message>
+	<wsdl:message name="RmvDeviceTNRequest">
+		<wsdl:part name="body" element="spg:RmvDeviceTNRequest"/>
+	</wsdl:message>
+	<wsdl:message name="RmvIRSTNRequest">
+		<wsdl:part name="body" element="spg:RmvIRSTNRequest"/>
+	</wsdl:message>
+	<wsdl:message name="RmvSubRequest">
+		<wsdl:part name="body" element="spg:RmvSubRequest"/>
+	</wsdl:message>
+	<wsdl:message name="SetESRNRequest">
+		<wsdl:part name="body" element="spg:SetESRNRequest"/>
+	</wsdl:message>
+	<wsdl:message name="SetRepDataRequest">
+		<wsdl:part name="body" element="spg:SetRepDataRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryRepDataRequest">
+		<wsdl:part name="body" element="spg:QueryRepDataRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ModDeviceRequest">
+		<wsdl:part name="body" element="spg:ModDeviceRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ModTNServiceRequest">
+		<wsdl:part name="body" element="spg:ModTNServiceRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryServiceDataRequest">
+		<wsdl:part name="body" element="spg:QueryServiceDataRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ActCDVResponse">
+		<wsdl:part name="body" element="spg:ActCDVResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActCFBResponse">
+		<wsdl:part name="body" element="spg:ActCFBResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActCFDAResponse">
+		<wsdl:part name="body" element="spg:ActCFDAResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActCFSResponse">
+		<wsdl:part name="body" element="spg:ActCFSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActCFUResponse">
+		<wsdl:part name="body" element="spg:ActCFUResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActCFVMResponse">
+		<wsdl:part name="body" element="spg:ActCFVMResponse"/>
+	</wsdl:message>
+	<wsdl:message name="SetOWSBRResponse">
+		<wsdl:part name="body" element="spg:SetOWSBRResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActPreProvResponse">
+		<wsdl:part name="body" element="spg:ActPreProvResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActSCRResponse">
+		<wsdl:part name="body" element="spg:ActSCRResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActSnowBirdResponse">
+		<wsdl:part name="body" element="spg:ActSnowBirdResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActSpeedDialResponse">
+		<wsdl:part name="body" element="spg:ActSpeedDialResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActTNResponse">
+		<wsdl:part name="body" element="spg:ActTNResponse"/>
+	</wsdl:message>
+	<wsdl:message name="AddPreProvDev3SubResponse">
+		<wsdl:part name="body" element="spg:AddPreProvDev2SubResponse"/>
+	</wsdl:message>
+	<wsdl:message name="AddTN2DeviceResponse">
+		<wsdl:part name="body" element="spg:AddTN2DeviceResponse"/>
+	</wsdl:message>
+	<wsdl:message name="AddTN2IRSResponse">
+		<wsdl:part name="body" element="spg:AddTN2IRSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCDVResponse">
+		<wsdl:part name="body" element="spg:DeactCDVResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCFBResponse">
+		<wsdl:part name="body" element="spg:DeactCFBResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCFDAResponse">
+		<wsdl:part name="body" element="spg:DeactCFDAResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCFSResponse">
+		<wsdl:part name="body" element="spg:DeactCFSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCFUResponse">
+		<wsdl:part name="body" element="spg:DeactCFUResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCFVMResponse">
+		<wsdl:part name="body" element="spg:DeactCFVMResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactSCRResponse">
+		<wsdl:part name="body" element="spg:DeactSCRResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactSnowBirdResponse">
+		<wsdl:part name="body" element="spg:DeactSnowBirdResponse"/>
+	</wsdl:message>
+	<wsdl:message name="SetNPSSBRResponse">
+		<wsdl:part name="body" element="spg:SetNPSSBRResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactSpeedDialResponse">
+		<wsdl:part name="body" element="spg:DeactSpeedDialResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactTNResponse">
+		<wsdl:part name="body" element="spg:DeactTNResponse"/>
+	</wsdl:message>
+	<wsdl:message name="PreProvResponse">
+		<wsdl:part name="body" element="spg:PreProvResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCFBResponse">
+		<wsdl:part name="body" element="spg:QueryCFBResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCFDAResponse">
+		<wsdl:part name="body" element="spg:QueryCFDAResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCFSResponse">
+		<wsdl:part name="body" element="spg:QueryCFSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCFUResponse">
+		<wsdl:part name="body" element="spg:QueryCFUResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryESRNResponse">
+		<wsdl:part name="body" element="spg:QueryESRNResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QuerySCRResponse">
+		<wsdl:part name="body" element="spg:QuerySCRResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QuerySpeedDialResponse">
+		<wsdl:part name="body" element="spg:QuerySpeedDialResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QuerySubResponse">
+		<wsdl:part name="body" element="spg:QuerySubResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryBARResponse">
+		<wsdl:part name="body" element="spg:QueryBARResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RmvDeviceResponse">
+		<wsdl:part name="body" element="spg:RmvDeviceResponse"/>
+	</wsdl:message>
+	<wsdl:message name="SwapTNResponse">
+		<wsdl:part name="body" element="spg:SwapTNResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RmvDeviceTNResponse">
+		<wsdl:part name="body" element="spg:RmvDeviceTNResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RmvIRSTNResponse">
+		<wsdl:part name="body" element="spg:RmvIRSTNResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RmvSubResponse">
+		<wsdl:part name="body" element="spg:RmvSubResponse"/>
+	</wsdl:message>
+	<wsdl:message name="SetESRNResponse">
+		<wsdl:part name="body" element="spg:SetESRNResponse"/>
+	</wsdl:message>
+	<wsdl:message name="SetRepDataResponse">
+		<wsdl:part name="body" element="spg:SetRepDataResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryRepDataResponse">
+		<wsdl:part name="body" element="spg:QueryRepDataResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ModDeviceResponse">
+		<wsdl:part name="body" element="spg:ModDeviceResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ModTNServiceResponse">
+		<wsdl:part name="body" element="spg:ModTNServiceResponse"/>
+	</wsdl:message>
+	<wsdl:message name="GenericHeader">
+		<wsdl:part name="header" element="spg:Authentication"/>
+	</wsdl:message>
+	<wsdl:message name="QueryServiceDataResponse">
+		<wsdl:part name="body" element="spg:QueryServiceDataResponse"/>
+	</wsdl:message>
+	<wsdl:message name="AddSiFCRequest">
+		<wsdl:part name="body" element="spg:AddSiFCRequest"/>
+	</wsdl:message>
+	<wsdl:message name="AddSiFCResponse">
+		<wsdl:part name="body" element="spg:AddSiFCResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ModSiFCRequest">
+		<wsdl:part name="body" element="spg:ModSiFCRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ModSiFCResponse">
+		<wsdl:part name="body" element="spg:ModSiFCResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RmvSiFCRequest">
+		<wsdl:part name="body" element="spg:RmvSiFCRequest"/>
+	</wsdl:message>
+	<wsdl:message name="RmvSiFCResponse">
+		<wsdl:part name="body" element="spg:RmvSiFCResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QuerySiFCRequest">
+		<wsdl:part name="body" element="spg:QuerySiFCRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QuerySiFCResponse">
+		<wsdl:part name="body" element="spg:QuerySiFCResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ModTNRequest">
+		<wsdl:part name="body" element="spg:ModTNRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ModTNResponse">
+		<wsdl:part name="body" element="spg:ModTNResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RegComSSRequest">
+		<wsdl:part name="body" element="spg:RegComSSRequest"/>
+	</wsdl:message>
+	<wsdl:message name="RegComSSResponse">
+		<wsdl:part name="body" element="spg:RegComSSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RplSSRequest">
+		<wsdl:part name="body" element="spg:RplSSRequest"/>
+	</wsdl:message>
+	<wsdl:message name="RplSSResponse">
+		<wsdl:part name="body" element="spg:RplSSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryDevRegStatusRequest">
+		<wsdl:part name="body" element="spg:QueryDevRegStatusRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryDevRegStatusResponse">
+		<wsdl:part name="body" element="spg:QueryDevRegStatusResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryChargeIDRequest">
+		<wsdl:part name="body" element="spg:QueryChargeIDRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryChargeIDResponse">
+		<wsdl:part name="body" element="spg:QueryChargeIDResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryTNTASAddrRequest">
+		<wsdl:part name="body" element="spg:QueryTNTASAddrRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryTNTASAddrResponse">
+		<wsdl:part name="body" element="spg:QueryTNTASAddrResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryReferralMSGRequest">
+		<wsdl:part name="body" element="spg:QueryReferralMSGRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryReferralMSGResponse">
+		<wsdl:part name="body" element="spg:QueryReferralMSGResponse"/>
+	</wsdl:message>
+	<wsdl:message name="AddReferralMSGRequest">
+		<wsdl:part name="body" element="spg:AddReferralMSGRequest"/>
+	</wsdl:message>
+	<wsdl:message name="AddReferralMSGResponse">
+		<wsdl:part name="body" element="spg:AddReferralMSGResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ModReferralMSGRequest">
+		<wsdl:part name="body" element="spg:ModReferralMSGRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ModReferralMSGResponse">
+		<wsdl:part name="body" element="spg:ModReferralMSGResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RmvReferralMSGRequest">
+		<wsdl:part name="body" element="spg:RmvReferralMSGRequest"/>
+	</wsdl:message>
+	<wsdl:message name="RmvReferralMSGResponse">
+		<wsdl:part name="body" element="spg:RmvReferralMSGResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCFVMRequest">
+		<wsdl:part name="body" element="spg:QueryCFVMRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCFVMResponse">
+		<wsdl:part name="body" element="spg:QueryCFVMResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActCFNRRequest">
+		<wsdl:part name="body" element="spg:ActCFNRRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeactCFNRRequest">
+		<wsdl:part name="body" element="spg:DeactCFNRRequest"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCFNRRequest">
+		<wsdl:part name="body" element="spg:QueryCFNRRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ActCFNRResponse">
+		<wsdl:part name="body" element="spg:ActCFNRResponse"/>
+	</wsdl:message>	
+	<wsdl:message name="DeactCFNRResponse">
+		<wsdl:part name="body" element="spg:DeactCFNRResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCFNRResponse">
+		<wsdl:part name="body" element="spg:QueryCFNRResponse"/>
+	</wsdl:message>	
+	<wsdl:message name="ActNPASRequest">
+		<wsdl:part name="body" element="spg:ActNPASRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ActNPASResponse">
+		<wsdl:part name="body" element="spg:ActNPASResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactNPASRequest">
+		<wsdl:part name="body" element="spg:DeactNPASRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DeactNPASResponse">
+		<wsdl:part name="body" element="spg:DeactNPASResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryRegisteredServiceRequest">
+		<wsdl:part name="body" element="spg:QueryRegisteredServiceRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="QueryRegisteredServiceResponse">
+		<wsdl:part name="body" element="spg:QueryRegisteredServiceResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QuerySnowBirdRequest">
+		<wsdl:part name="body" element="spg:QuerySnowBirdRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="QuerySnowBirdResponse">
+		<wsdl:part name="body" element="spg:QuerySnowBirdResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RmvNPSSBRRequest">
+		<wsdl:part name="body" element="spg:RmvNPSSBRRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="RmvNPSSBRResponse">
+		<wsdl:part name="body" element="spg:RmvNPSSBRResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryNPSSBRRequest">
+		<wsdl:part name="body" element="spg:QueryNPSSBRRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="QueryNPSSBRResponse">
+		<wsdl:part name="body" element="spg:QueryNPSSBRResponse"/>
+	</wsdl:message>
+	<wsdl:message name="SetLRIRequest">
+		<wsdl:part name="body" element="spg:SetLRIRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="SetLRIResponse">
+		<wsdl:part name="body" element="spg:SetLRIResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryLRIRequest">
+		<wsdl:part name="body" element="spg:QueryLRIRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="QueryLRIResponse">
+		<wsdl:part name="body" element="spg:QueryLRIResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ChangeUNameRequest">
+		<wsdl:part name="body" element="spg:ChangeUNameRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ChangeUNameResponse">
+		<wsdl:part name="body" element="spg:ChangeUNameResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DrgUserRequest">
+		<wsdl:part name="body" element="spg:DrgUserRequest"/>
+	</wsdl:message>
+	<wsdl:message name="DrgUserResponse">
+		<wsdl:part name="body" element="spg:DrgUserResponse"/>
+	</wsdl:message>
+	<wsdl:message name="PreProv4HSSRequest">
+		<wsdl:part name="body" element="spg:PreProv4HSSRequest"/>
+	</wsdl:message>
+	<wsdl:message name="PreProv4HSSResponse">
+		<wsdl:part name="body" element="spg:PreProv4HSSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="AddTN2Device4HSSRequest">
+		<wsdl:part name="body" element="spg:AddTN2Device4HSSRequest"/>
+	</wsdl:message>
+	<wsdl:message name="AddTN2Device4HSSResponse">
+		<wsdl:part name="body" element="spg:AddTN2Device4HSSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="AddPreProvDev2Sub4HSSRequest">
+		<wsdl:part name="body" element="spg:AddPreProvDev2Sub4HSSRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="AddPreProvDev2Sub4HSSResponse">
+		<wsdl:part name="body" element="spg:AddPreProvDev2Sub4HSSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActNPAS4HSSRequest">
+		<wsdl:part name="body" element="spg:ActNPAS4HSSRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="ActNPAS4HSSResponse">
+		<wsdl:part name="body" element="spg:ActNPAS4HSSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactNPAS4HSSRequest">
+		<wsdl:part name="body" element="spg:DeactNPAS4HSSRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="DeactNPAS4HSSResponse">
+		<wsdl:part name="body" element="spg:DeactNPAS4HSSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QuerySub4HSSRequest">
+		<wsdl:part name="body" element="spg:QuerySub4HSSRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="QuerySub4HSSResponse">
+		<wsdl:part name="body" element="spg:QuerySub4HSSResponse"/>
+	</wsdl:message>	
+	<wsdl:message name="HeartbeatRequest">
+		<wsdl:part name="body" element="spg:HeartbeatRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="HeartbeatResponse">
+		<wsdl:part name="body" element="spg:HeartbeatResponse"/>
+	</wsdl:message>
+	
+	<!-- PSI by 20100915 -->
+	
+	<wsdl:message name="AddPSISubRequest">
+		<wsdl:part name="body" element="spg:AddPSISubRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="AddPSISubResponse">
+		<wsdl:part name="body" element="spg:AddPSISubResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RmvPSISubRequest">
+		<wsdl:part name="body" element="spg:RmvPSISubRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="RmvPSISubResponse">
+		<wsdl:part name="body" element="spg:RmvPSISubResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryPSISubRequest">
+		<wsdl:part name="body" element="spg:QueryPSISubRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="QueryPSISubResponse">
+		<wsdl:part name="body" element="spg:QueryPSISubResponse"/>
+	</wsdl:message>
+	<wsdl:message name="AddCAPSCSCFRequest">
+		<wsdl:part name="body" element="spg:AddCAPSCSCFRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="AddCAPSCSCFResponse">
+		<wsdl:part name="body" element="spg:AddCAPSCSCFResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RmvCAPSCSCFRequest">
+		<wsdl:part name="body" element="spg:RmvCAPSCSCFRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="RmvCAPSCSCFResponse">
+		<wsdl:part name="body" element="spg:RmvCAPSCSCFResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCAPSCSCFRequest">
+		<wsdl:part name="body" element="spg:QueryCAPSCSCFRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="QueryCAPSCSCFResponse">
+		<wsdl:part name="body" element="spg:QueryCAPSCSCFResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ModPUSIASRequest">
+		<wsdl:part name="body" element="spg:ModPUSIASRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="ModPUSIASResponse">
+		<wsdl:part name="body" element="spg:ModPUSIASResponse"/>
+	</wsdl:message>
+	<wsdl:message name="SetCapRequest">
+		<wsdl:part name="body" element="spg:SetCapRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="SetCapResponse">
+		<wsdl:part name="body" element="spg:SetCapResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryCapRequest">
+		<wsdl:part name="body" element="spg:QueryCapRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="QueryCapResponse">
+		<wsdl:part name="body" element="spg:QueryCapResponse"/>
+	</wsdl:message>
+	
+	<!-- PSI by 20100915 -->
+	
+	<!-- ATS by 20100929 -->
+	
+	<wsdl:message name="AddFMFMRequest">
+		<wsdl:part name="body" element="spg:AddFMFMRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="AddFMFMResponse">
+		<wsdl:part name="body" element="spg:AddFMFMResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ModFMFMRequest">
+		<wsdl:part name="body" element="spg:ModFMFMRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="ModFMFMResponse">
+		<wsdl:part name="body" element="spg:ModFMFMResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RmvFMFMRequest">
+		<wsdl:part name="body" element="spg:RmvFMFMRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="RmvFMFMResponse">
+		<wsdl:part name="body" element="spg:RmvFMFMResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryFMFMRequest">
+		<wsdl:part name="body" element="spg:QueryFMFMRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="QueryFMFMResponse">
+		<wsdl:part name="body" element="spg:QueryFMFMResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ActSSRequest">
+		<wsdl:part name="body" element="spg:ActSSRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="ActSSResponse">
+		<wsdl:part name="body" element="spg:ActSSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeactSSRequest">
+		<wsdl:part name="body" element="spg:DeactSSRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="DeactSSResponse">
+		<wsdl:part name="body" element="spg:DeactSSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QuerySSRequest">
+		<wsdl:part name="body" element="spg:QuerySSRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="QuerySSResponse">
+		<wsdl:part name="body" element="spg:QuerySSResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RegSBRequest">
+		<wsdl:part name="body" element="spg:RegSBRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="RegSBResponse">
+		<wsdl:part name="body" element="spg:RegSBResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RplSBRequest">
+		<wsdl:part name="body" element="spg:RplSBRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="RplSBResponse">
+		<wsdl:part name="body" element="spg:RplSBResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QuerySBRequest">
+		<wsdl:part name="body" element="spg:QuerySBRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="QuerySBResponse">
+		<wsdl:part name="body" element="spg:QuerySBResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RegDRCWRequest">
+		<wsdl:part name="body" element="spg:RegDRCWRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="RegDRCWResponse">
+		<wsdl:part name="body" element="spg:RegDRCWResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RplDRCWRequest">
+		<wsdl:part name="body" element="spg:RplDRCWRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="RplDRCWResponse">
+		<wsdl:part name="body" element="spg:RplDRCWResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryDRCWRequest">
+		<wsdl:part name="body" element="spg:QueryDRCWRequest"/>
+	</wsdl:message>	
+	<wsdl:message name="QueryDRCWResponse">
+		<wsdl:part name="body" element="spg:QueryDRCWResponse"/>
+	</wsdl:message>
+	
+	<!-- ATS by 20100929 -->
+	
+	<wsdl:portType name="SPG2800Port">
+		<wsdl:operation name="ActCFB">
+			<wsdl:input message="spg:ActCFBRequest"/>
+			<wsdl:output message="spg:ActCFBResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActCFDA">
+			<wsdl:input message="spg:ActCFDARequest"/>
+			<wsdl:output message="spg:ActCFDAResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActCFS">
+			<wsdl:input message="spg:ActCFSRequest"/>
+			<wsdl:output message="spg:ActCFSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActCFU">
+			<wsdl:input message="spg:ActCFURequest"/>
+			<wsdl:output message="spg:ActCFUResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActCFVM">
+			<wsdl:input message="spg:ActCFVMRequest"/>
+			<wsdl:output message="spg:ActCFVMResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SetOWSBR">
+			<wsdl:input message="spg:SetOWSBRRequest"/>
+			<wsdl:output message="spg:SetOWSBRResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActPreProv">
+			<wsdl:input message="spg:ActPreProvRequest"/>
+			<wsdl:output message="spg:ActPreProvResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActSCR">
+			<wsdl:input message="spg:ActSCRRequest"/>
+			<wsdl:output message="spg:ActSCRResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActSnowBird">
+			<wsdl:input message="spg:ActSnowBirdRequest"/>
+			<wsdl:output message="spg:ActSnowBirdResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActSpeedDial">
+			<wsdl:input message="spg:ActSpeedDialRequest"/>
+			<wsdl:output message="spg:ActSpeedDialResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActTN">
+			<wsdl:input message="spg:ActTNRequest"/>
+			<wsdl:output message="spg:ActTNResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="AddPreProvDev2Sub">
+			<wsdl:input message="spg:AddPreProvDev2SubRequest"/>
+			<wsdl:output message="spg:AddPreProvDev3SubResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="AddTN2Device">
+			<wsdl:input message="spg:AddTN2DeviceRequest"/>
+			<wsdl:output message="spg:AddTN2DeviceResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="AddTN2IRS">
+			<wsdl:input message="spg:AddTN2IRSRequest"/>
+			<wsdl:output message="spg:AddTN2IRSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactCFB">
+			<wsdl:input message="spg:DeactCFBRequest"/>
+			<wsdl:output message="spg:DeactCFBResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactCFDA">
+			<wsdl:input message="spg:DeactCFDARequest"/>
+			<wsdl:output message="spg:DeactCFDAResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactCFS">
+			<wsdl:input message="spg:DeactCFSRequest"/>
+			<wsdl:output message="spg:DeactCFSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactCFU">
+			<wsdl:input message="spg:DeactCFURequest"/>
+			<wsdl:output message="spg:DeactCFUResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactCFVM">
+			<wsdl:input message="spg:DeactCFVMRequest"/>
+			<wsdl:output message="spg:DeactCFVMResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactSCR">
+			<wsdl:input message="spg:DeactSCRRequest"/>
+			<wsdl:output message="spg:DeactSCRResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactSnowBird">
+			<wsdl:input message="spg:DeactSnowBirdRequest"/>
+			<wsdl:output message="spg:DeactSnowBirdResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SetNPSSBR">
+			<wsdl:input message="spg:SetNPSSBRRequest"/>
+			<wsdl:output message="spg:SetNPSSBRResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactSpeedDial">
+			<wsdl:input message="spg:DeactSpeedDialRequest"/>
+			<wsdl:output message="spg:DeactSpeedDialResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactTN">
+			<wsdl:input message="spg:DeactTNRequest"/>
+			<wsdl:output message="spg:DeactTNResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="PreProv">
+			<wsdl:input message="spg:PreProvRequest"/>
+			<wsdl:output message="spg:PreProvResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCFB">
+			<wsdl:input message="spg:QueryCFBRequest"/>
+			<wsdl:output message="spg:QueryCFBResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCFDA">
+			<wsdl:input message="spg:QueryCFDARequest"/>
+			<wsdl:output message="spg:QueryCFDAResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCFS">
+			<wsdl:input message="spg:QueryCFSRequest"/>
+			<wsdl:output message="spg:QueryCFSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCFU">
+			<wsdl:input message="spg:QueryCFURequest"/>
+			<wsdl:output message="spg:QueryCFUResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryESRN">
+			<wsdl:input message="spg:QueryESRNRequest"/>
+			<wsdl:output message="spg:QueryESRNResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySCR">
+			<wsdl:input message="spg:QuerySCRRequest"/>
+			<wsdl:output message="spg:QuerySCRResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySpeedDial">
+			<wsdl:input message="spg:QuerySpeedDialRequest"/>
+			<wsdl:output message="spg:QuerySpeedDialResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySub">
+			<wsdl:input message="spg:QuerySubRequest"/>
+			<wsdl:output message="spg:QuerySubResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryBAR">
+			<wsdl:input message="spg:QueryBARRequest"/>
+			<wsdl:output message="spg:QueryBARResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RmvDevice">
+			<wsdl:input message="spg:RmvDeviceRequest"/>
+			<wsdl:output message="spg:RmvDeviceResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SwapTN">
+			<wsdl:input message="spg:SwapTNRequest"/>
+			<wsdl:output message="spg:SwapTNResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RmvDeviceTN">
+			<wsdl:input message="spg:RmvDeviceTNRequest"/>
+			<wsdl:output message="spg:RmvDeviceTNResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RmvIRSTN">
+			<wsdl:input message="spg:RmvIRSTNRequest"/>
+			<wsdl:output message="spg:RmvIRSTNResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RmvSub">
+			<wsdl:input message="spg:RmvSubRequest"/>
+			<wsdl:output message="spg:RmvSubResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SetESRN">
+			<wsdl:input message="spg:SetESRNRequest"/>
+			<wsdl:output message="spg:SetESRNResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SetRepData">
+			<wsdl:input message="spg:SetRepDataRequest"/>
+			<wsdl:output message="spg:SetRepDataResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryRepData">
+			<wsdl:input message="spg:QueryRepDataRequest"/>
+			<wsdl:output message="spg:QueryRepDataResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ModDevice">
+			<wsdl:input message="spg:ModDeviceRequest"/>
+			<wsdl:output message="spg:ModDeviceResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ModTNService">
+			<wsdl:input message="spg:ModTNServiceRequest"/>
+			<wsdl:output message="spg:ModTNServiceResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryServiceData">
+			<wsdl:input message="spg:QueryServiceDataRequest"/>
+			<wsdl:output message="spg:QueryServiceDataResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="AddSiFC">
+			<wsdl:input message="spg:AddSiFCRequest"/>
+			<wsdl:output message="spg:AddSiFCResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ModSiFC">
+			<wsdl:input message="spg:ModSiFCRequest"/>
+			<wsdl:output message="spg:ModSiFCResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RmvSiFC">
+			<wsdl:input message="spg:RmvSiFCRequest"/>
+			<wsdl:output message="spg:RmvSiFCResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySiFC">
+			<wsdl:input message="spg:QuerySiFCRequest"/>
+			<wsdl:output message="spg:QuerySiFCResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ModTN">
+			<wsdl:input message="spg:ModTNRequest"/>
+			<wsdl:output message="spg:ModTNResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RegComSS">
+			<wsdl:input message="spg:RegComSSRequest"/>
+			<wsdl:output message="spg:RegComSSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RplSS">
+			<wsdl:input message="spg:RplSSRequest"/>
+			<wsdl:output message="spg:RplSSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryDevRegStatus">
+			<wsdl:input message="spg:QueryDevRegStatusRequest"/>
+			<wsdl:output message="spg:QueryDevRegStatusResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryChargeID">
+			<wsdl:input message="spg:QueryChargeIDRequest"/>
+			<wsdl:output message="spg:QueryChargeIDResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryTNTASAddr">
+			<wsdl:input message="spg:QueryTNTASAddrRequest"/>
+			<wsdl:output message="spg:QueryTNTASAddrResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="AddReferralMSG">
+			<wsdl:input message="spg:AddReferralMSGRequest"/>
+			<wsdl:output message="spg:AddReferralMSGResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ModReferralMSG">
+			<wsdl:input message="spg:ModReferralMSGRequest"/>
+			<wsdl:output message="spg:ModReferralMSGResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RmvReferralMSG">
+			<wsdl:input message="spg:RmvReferralMSGRequest"/>
+			<wsdl:output message="spg:RmvReferralMSGResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryReferralMSG">
+			<wsdl:input message="spg:QueryReferralMSGRequest"/>
+			<wsdl:output message="spg:QueryReferralMSGResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCFVM">
+			<wsdl:input message="spg:QueryCFVMRequest"/>
+			<wsdl:output message="spg:QueryCFVMResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActCFNR">
+			<wsdl:input message="spg:ActCFNRRequest"/>
+			<wsdl:output message="spg:ActCFNRResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactCFNR">
+			<wsdl:input message="spg:DeactCFNRRequest"/> 
+			<wsdl:output message="spg:DeactCFNRResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCFNR">
+			<wsdl:input message="spg:QueryCFNRRequest"/>
+			<wsdl:output message="spg:QueryCFNRResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactNPAS">
+			<wsdl:input message="spg:DeactNPASRequest"/> 
+			<wsdl:output message="spg:DeactNPASResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActNPAS">
+			<wsdl:input message="spg:ActNPASRequest"/>
+			<wsdl:output message="spg:ActNPASResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryRegisteredService">
+			<wsdl:input message="spg:QueryRegisteredServiceRequest"/>
+			<wsdl:output message="spg:QueryRegisteredServiceResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySnowBird">
+			<wsdl:input message="spg:QuerySnowBirdRequest"/>
+			<wsdl:output message="spg:QuerySnowBirdResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RmvNPSSBR">
+			<wsdl:input message="spg:RmvNPSSBRRequest"/>
+			<wsdl:output message="spg:RmvNPSSBRResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryNPSSBR">
+			<wsdl:input message="spg:QueryNPSSBRRequest"/>
+			<wsdl:output message="spg:QueryNPSSBRResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SetLRI">
+			<wsdl:input message="spg:SetLRIRequest"/>
+			<wsdl:output message="spg:SetLRIResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryLRI">
+			<wsdl:input message="spg:QueryLRIRequest"/>
+			<wsdl:output message="spg:QueryLRIResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ChangeUName">
+			<wsdl:input message="spg:ChangeUNameRequest"/>
+			<wsdl:output message="spg:ChangeUNameResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DrgUser">
+			<wsdl:input message="spg:DrgUserRequest"/>
+			<wsdl:output message="spg:DrgUserResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="PreProv4HSS">
+			<wsdl:input message="spg:PreProv4HSSRequest"/>
+			<wsdl:output message="spg:PreProv4HSSResponse"/>
+		</wsdl:operation>		
+		<wsdl:operation name="AddTN2Device4HSS">
+			<wsdl:input message="spg:AddTN2Device4HSSRequest"/>
+			<wsdl:output message="spg:AddTN2Device4HSSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="AddPreProvDev2Sub4HSS">
+			<wsdl:input message="spg:AddPreProvDev2Sub4HSSRequest"/>
+			<wsdl:output message="spg:AddPreProvDev2Sub4HSSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActNPAS4HSS">
+			<wsdl:input message="spg:ActNPAS4HSSRequest"/>
+			<wsdl:output message="spg:ActNPAS4HSSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactNPAS4HSS">
+			<wsdl:input message="spg:DeactNPAS4HSSRequest"/>
+			<wsdl:output message="spg:DeactNPAS4HSSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySub4HSS">
+			<wsdl:input message="spg:QuerySub4HSSRequest"/>
+			<wsdl:output message="spg:QuerySub4HSSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="Heartbeat">
+			<wsdl:input message="spg:HeartbeatRequest"/>
+			<wsdl:output message="spg:HeartbeatResponse"/>
+		</wsdl:operation>
+		
+		<!-- PSI by 20100915 -->
+		
+		<wsdl:operation name="AddPSISub">
+			<wsdl:input message="spg:AddPSISubRequest"/>
+			<wsdl:output message="spg:AddPSISubResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RmvPSISub">
+			<wsdl:input message="spg:RmvPSISubRequest"/>
+			<wsdl:output message="spg:RmvPSISubResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryPSISub">
+			<wsdl:input message="spg:QueryPSISubRequest"/>
+			<wsdl:output message="spg:QueryPSISubResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="AddCAPSCSCF">
+			<wsdl:input message="spg:AddCAPSCSCFRequest"/>
+			<wsdl:output message="spg:AddCAPSCSCFResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RmvCAPSCSCF">
+			<wsdl:input message="spg:RmvCAPSCSCFRequest"/>
+			<wsdl:output message="spg:RmvCAPSCSCFResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCAPSCSCF">
+			<wsdl:input message="spg:QueryCAPSCSCFRequest"/>
+			<wsdl:output message="spg:QueryCAPSCSCFResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ModPUSIAS">
+			<wsdl:input message="spg:ModPUSIASRequest"/>
+			<wsdl:output message="spg:ModPUSIASResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SetCap">
+			<wsdl:input message="spg:SetCapRequest"/>
+			<wsdl:output message="spg:SetCapResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCap">
+			<wsdl:input message="spg:QueryCapRequest"/>
+			<wsdl:output message="spg:QueryCapResponse"/>
+		</wsdl:operation>
+		
+		<!-- PSI by 20100915 -->
+		
+		<!-- ATS by 20100929 -->
+		
+		<wsdl:operation name="AddFMFM">
+			<wsdl:input message="spg:AddFMFMRequest"/>
+			<wsdl:output message="spg:AddFMFMResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ModFMFM">
+			<wsdl:input message="spg:ModFMFMRequest"/>
+			<wsdl:output message="spg:ModFMFMResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RmvFMFM">
+			<wsdl:input message="spg:RmvFMFMRequest"/>
+			<wsdl:output message="spg:RmvFMFMResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryFMFM">
+			<wsdl:input message="spg:QueryFMFMRequest"/>
+			<wsdl:output message="spg:QueryFMFMResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ActSS">
+			<wsdl:input message="spg:ActSSRequest"/>
+			<wsdl:output message="spg:ActSSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeactSS">
+			<wsdl:input message="spg:DeactSSRequest"/>
+			<wsdl:output message="spg:DeactSSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySS">
+			<wsdl:input message="spg:QuerySSRequest"/>
+			<wsdl:output message="spg:QuerySSResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RegSB">
+			<wsdl:input message="spg:RegSBRequest"/>
+			<wsdl:output message="spg:RegSBResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RplSB">
+			<wsdl:input message="spg:RplSBRequest"/>
+			<wsdl:output message="spg:RplSBResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySB">
+			<wsdl:input message="spg:QuerySBRequest"/>
+			<wsdl:output message="spg:QuerySBResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RegDRCW">
+			<wsdl:input message="spg:RegDRCWRequest"/>
+			<wsdl:output message="spg:RegDRCWResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RplDRCW">
+			<wsdl:input message="spg:RplDRCWRequest"/>
+			<wsdl:output message="spg:RplDRCWResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryDRCW">
+			<wsdl:input message="spg:QueryDRCWRequest"/>
+			<wsdl:output message="spg:QueryDRCWResponse"/>
+		</wsdl:operation>
+		
+		<!-- ATS by 20100929 -->
+		
+	</wsdl:portType>
+	
+	<wsdl:binding name="SPG2800Binding" type="spg:SPG2800Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="ActCFB">
+			<soap:operation soapAction="urn:#ActCFB"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActCFDA">
+			<soap:operation soapAction="urn:#ActCFDA"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActCFS">
+			<soap:operation soapAction="urn:#ActCFS"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActCFU">
+			<soap:operation soapAction="urn:#ActCFU"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActCFVM">
+			<soap:operation soapAction="urn:#ActCFVM"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SetOWSBR">
+			<soap:operation soapAction="urn:#SetOWSBR"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActPreProv">
+			<soap:operation soapAction="urn:#ActPreProv"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActSCR">
+			<soap:operation soapAction="urn:#ActSCR"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActSnowBird">
+			<soap:operation soapAction="urn:#ActSnowBird"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActSpeedDial">
+			<soap:operation soapAction="urn:#ActSpeedDial"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActTN">
+			<soap:operation soapAction="urn:#ActTN"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="AddPreProvDev2Sub">
+			<soap:operation soapAction="urn:#AddPreProvDev2Sub"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="AddTN2Device">
+			<soap:operation soapAction="urn:#AddTN2Device"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="AddTN2IRS">
+			<soap:operation soapAction="urn:#AddTN2IRS"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactCFB">
+			<soap:operation soapAction="urn:#DeactCFB"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactCFDA">
+			<soap:operation soapAction="urn:#DeactCFDA"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactCFS">
+			<soap:operation soapAction="urn:#DeactCFS"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactCFU">
+			<soap:operation soapAction="urn:#DeactCFU"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactCFVM">
+			<soap:operation soapAction="urn:#DeactCFVM"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactSCR">
+			<soap:operation soapAction="urn:#DeactSCR"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactSnowBird">
+			<soap:operation soapAction="urn:#DeactSnowBird"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SetNPSSBR">
+			<soap:operation soapAction="urn:#SetNPSSBR"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactSpeedDial">
+			<soap:operation soapAction="urn:#DeactSpeedDial"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactTN">
+			<soap:operation soapAction="urn:#DeactTN"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="PreProv">
+			<soap:operation soapAction="urn:#PreProv"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCFB">
+			<soap:operation soapAction="urn:#QueryCFB"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCFDA">
+			<soap:operation soapAction="urn:#QueryCFDA"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCFS">
+			<soap:operation soapAction="urn:#QueryCFS"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCFU">
+			<soap:operation soapAction="urn:#QueryCFU"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryESRN">
+			<soap:operation soapAction="urn:#QueryESRN"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySCR">
+			<soap:operation soapAction="urn:#QuerySCR"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySpeedDial">
+			<soap:operation soapAction="urn:#QuerySpeedDial"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySub">
+			<soap:operation soapAction="urn:#QuerySub"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryBAR">
+			<soap:operation soapAction="urn:#QueryBAR"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RmvDevice">
+			<soap:operation soapAction="urn:#RmvDevice"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SwapTN">
+			<soap:operation soapAction="urn:#SwapTN"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RmvDeviceTN">
+			<soap:operation soapAction="urn:#RmvDeviceTN"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RmvIRSTN">
+			<soap:operation soapAction="urn:#RmvIRSTN"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RmvSub">
+			<soap:operation soapAction="urn:#RmvSub"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SetESRN">
+			<soap:operation soapAction="urn:#SetESRN"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SetRepData">
+			<soap:operation soapAction="urn:#SetRepData"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryRepData">
+			<soap:operation soapAction="urn:#QueryRepData"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ModDevice">
+			<soap:operation soapAction="urn:#ModDevice"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ModTN">
+			<soap:operation soapAction="urn:#ModTN"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryServiceData">
+			<soap:operation soapAction="urn:#QueryServiceData"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="AddSiFC">
+			<soap:operation soapAction="urn:#AddSiFC"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ModSiFC">
+			<soap:operation soapAction="urn:#ModSiFC"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RmvSiFC">
+			<soap:operation soapAction="urn:#RmvSiFC"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySiFC">
+			<soap:operation soapAction="urn:#QuerySiFC"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ModTNService">
+			<soap:operation soapAction="urn:#ModTNService"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RegComSS">
+			<soap:operation soapAction="urn:#RegComSS"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RplSS">
+			<soap:operation soapAction="urn:#RplSS"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryDevRegStatus">
+			<soap:operation soapAction="urn:#QueryDevRegStatus"/>
+			<wsdl:input>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryChargeID">
+			<soap:operation soapAction="urn:#QueryChargeID"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryTNTASAddr">
+			<soap:operation soapAction="urn:#NQueryTNTASAddr"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="AddReferralMSG">
+			<soap:operation soapAction="urn:#AddReferralMSG"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ModReferralMSG">
+			<soap:operation soapAction="urn:#ModReferralMSG"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RmvReferralMSG">
+			<soap:operation soapAction="urn:#RmvReferralMSG"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryReferralMSG">
+			<soap:operation soapAction="urn:#QueryReferralMSG"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCFVM">
+			<soap:operation soapAction="urn:#QueryCFVM"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActCFNR">
+			<soap:operation soapAction="urn:#ActCFNR"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactCFNR">
+			<soap:operation soapAction="urn:#DeactCFNR"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCFNR">
+			<soap:operation soapAction="urn:#QueryCFNR"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActNPAS">
+			<soap:operation soapAction="urn:#ActNPAS"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactNPAS">
+			<soap:operation soapAction="urn:#DeactNPAS"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>		
+		<wsdl:operation name="QueryRegisteredService">
+			<soap:operation soapAction="urn:#QueryRegisteredService"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySnowBird">
+			<soap:operation soapAction="urn:#QuerySnowBird"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RmvNPSSBR">
+			<soap:operation soapAction="urn:#RmvNPSSBR"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryNPSSBR">
+			<soap:operation soapAction="urn:#QueryNPSSBR"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SetLRI">
+			<soap:operation soapAction="urn:#SetLRI"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryLRI">
+			<soap:operation soapAction="urn:#QueryLRI"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ChangeUName">
+			<soap:operation soapAction="urn:#ChangeUName"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DrgUser">
+			<soap:operation soapAction="urn:#DrgUser"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="PreProv4HSS">
+			<soap:operation soapAction="urn:#PreProv4HSS"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="AddTN2Device4HSS">
+			<soap:operation soapAction="urn:#AddTN2Device4HSS"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="AddPreProvDev2Sub4HSS">
+			<soap:operation soapAction="urn:#AddPreProvDev2Sub4HSS"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActNPAS4HSS">
+			<soap:operation soapAction="urn:#ActNPAS4HSS"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactNPAS4HSS">
+			<soap:operation soapAction="urn:#DeactNPAS4HSS"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySub4HSS">
+			<soap:operation soapAction="urn:#QuerySub4HSS"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Heartbeat">
+			<soap:operation soapAction="urn:#Heartbeat"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<!-- PSI by 20100915 -->
+		
+		<wsdl:operation name="AddPSISub">
+			<soap:operation soapAction="urn:#AddPSISub"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RmvPSISub">
+			<soap:operation soapAction="urn:#RmvPSISub"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryPSISub">
+			<soap:operation soapAction="urn:#QueryPSISub"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="AddCAPSCSCF">
+			<soap:operation soapAction="urn:#AddCAPSCSCF"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RmvCAPSCSCF">
+			<soap:operation soapAction="urn:#RmvCAPSCSCF"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCAPSCSCF">
+			<soap:operation soapAction="urn:#QueryCAPSCSCF"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ModPUSIAS">
+			<soap:operation soapAction="urn:#ModPUSIAS"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SetCap">
+			<soap:operation soapAction="urn:#SetCap"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryCap">
+			<soap:operation soapAction="urn:#QueryCap"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<!-- PSI by 20100915 -->
+		
+		<!-- ATS by 20100929 -->
+		
+		<wsdl:operation name="AddFMFM">
+			<soap:operation soapAction="urn:#AddFMFM"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ModFMFM">
+			<soap:operation soapAction="urn:#ModFMFM"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RmvFMFM">
+			<soap:operation soapAction="urn:#RmvFMFM"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryFMFM">
+			<soap:operation soapAction="urn:#QueryFMFM"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ActSS">
+			<soap:operation soapAction="urn:#ActSS"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeactSS">
+			<soap:operation soapAction="urn:#DeactSS"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySS">
+			<soap:operation soapAction="urn:#QuerySS"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RegSB">
+			<soap:operation soapAction="urn:#RegSB"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RplSB">
+			<soap:operation soapAction="urn:#RplSB"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySB">
+			<soap:operation soapAction="urn:#QuerySB"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RegDRCW">
+			<soap:operation soapAction="urn:#RegDRCW"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RplDRCW">
+			<soap:operation soapAction="urn:#RplDRCW"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryDRCW">
+			<soap:operation soapAction="urn:#QueryDRCW"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="spg:GenericHeader" part="header" use="literal"/>
+				<soap:header message="spg:ResendFlagHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<!-- ATS by 20100929 -->
+		
+	</wsdl:binding>
+	
+	<wsdl:service name="SPG2800Service">
+		<wsdl:port name="SPG2800Port" binding="spg:SPG2800Binding">
+			<soap:address location="http://www.huawei.com/spg"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
