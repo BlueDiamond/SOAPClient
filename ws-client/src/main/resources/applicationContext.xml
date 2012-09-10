@@ -16,7 +16,7 @@
 	<!-- enabling spring task scheduler -->
 	<task:annotation-driven />
 
-	<context:component-scan base-package="com.comcast.qa.xfinity" />
+	<context:component-scan base-package="com.comcast.spg.ws" />
 
 	<!-- <util:properties id="fingerprintProps" location="classpath:fingerprint.properties" /> -->
 
@@ -24,7 +24,7 @@
 	<oxm:jaxb2-marshaller id="oxmJaxbMarshaller" contextPath="com.huawei.spg2800.v100r002c03" />
 
 	<!-- Spring 2.5 OXM JAXB2 marshaller -->
-	<bean id="jaxb2Marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+	<!-- <bean id="jaxb2Marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
 		<property name="classesToBeBound">
 			<list>
 				<value>com.example.package.class1</value>
@@ -32,7 +32,7 @@
 			</list>
 		</property>
 		<property name="schema" value="classpath:schema/example_schema.xsd" />
-	</bean>
+	</bean> -->
 
 	<!-- JAXB2 marshaller -->
 	<bean id="jaxbContext" class="javax.xml.bind.JAXBContext" factory-method="newInstance">

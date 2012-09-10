@@ -1,5 +1,8 @@
 package com.comcast.spg.ws.cxf.client;
 
+import java.net.URL;
+
+import org.apache.cxf.ws.policy.v200607.URI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,34 +21,37 @@ public class ComcastSpgWsClient {
 
 		try {
 			// get the service and port
-			// SPG2800Service service = new SPG2800Service(URL wsdlLocation);
-			SPG2800Service service = new SPG2800Service();
+			//URL url = new URL("http://10.253.141.93:8080/spg");
+//			URL url = new URL("http://10.253.141.93:8888/spg/wsdl/spg_service.wsdl?wsdl");
+			URL url = new URL("http://10.253.141.93:8888/spg/wsdl/spg_service.wsdl");
+			SPG2800Service service = new SPG2800Service(url);
+			//SPG2800Service service = new SPG2800Service();
 			SPG2800Port port = service.getSPG2800Port();
 
 			// build request object
 			ObjectFactory objectFactory = new ObjectFactory();
-			objectFactory.createAuthentication().setUsername("username");
-			objectFactory.createAuthentication().setPassword("pwd");
+			objectFactory.createAuthentication().setUsername("voice2go");
+			objectFactory.createAuthentication().setPassword("D73C5E52366686E60067A1876488DFC1");
 			QueryFMFMRequest queryFMFMRequest = objectFactory.createQueryFMFMRequest();
-			queryFMFMRequest.setIMPU("etgegege");
+			queryFMFMRequest.setIMPU("tel:+16094865643");
 
 			// make the service with the request
 			logger.debug("Invoking Comcast Spg Ws with apache CXF generated Client... ");
-			QueryFMFMResponse queryFMFMResponse = port.queryFMFM(queryFMFMRequest);
+//			QueryFMFMResponse queryFMFMResponse = port.queryFMFM(queryFMFMRequest);
 
 			// extract data from response
-			QueryFMFMResponse.ResultData resultData = queryFMFMResponse.getResultData();
-			QueryFMFMResponse.ResultData.Table1 table = resultData.getTable1();
-			QueryFMFMType queryFMFMType = table.getItem();
+//			QueryFMFMResponse.ResultData resultData = queryFMFMResponse.getResultData();
+//			QueryFMFMResponse.ResultData.Table1 table = resultData.getTable1();
+//			QueryFMFMType queryFMFMType = table.getItem();
 
-			Integer CWRTONE = queryFMFMType.getCWRTONE();
-			String IMPU = queryFMFMType.getIMPU();
-			Integer PROMODE302 = queryFMFMType.getPROMODE302();
-			Integer RINGTONE = queryFMFMType.getRINGTONE();
-			Integer RTYPE = queryFMFMType.getRTYPE();
+//			Integer CWRTONE = queryFMFMType.getCWRTONE();
+//			String IMPU = queryFMFMType.getIMPU();
+//			Integer PROMODE302 = queryFMFMType.getPROMODE302();
+//			Integer RINGTONE = queryFMFMType.getRINGTONE();
+//			Integer RTYPE = queryFMFMType.getRTYPE();
 
-			logger.debug("WS call returned with Result:: CWRTONE:" + CWRTONE + ", IMPU:" + IMPU + ", PROMODE302:" + PROMODE302 + ", RINGTONE:" + RINGTONE
-					+ ", RTYPE:" + RTYPE);
+//			logger.debug("WS call returned with Result:: CWRTONE:" + CWRTONE + ", IMPU:" + IMPU + ", PROMODE302:" + PROMODE302 + ", RINGTONE:" + RINGTONE
+//					+ ", RTYPE:" + RTYPE);
 		} catch (Exception e) {
 			logger.error("Exception received: ", e);
 		}
