@@ -4,17 +4,28 @@
 	<artifactId>ws-client</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0</version>
-	<name>ws-client app</name>
+	<name>ws-client-connector</name>
 	<url>http://maven.apache.org</url>
 
+	<distributionManagement>
+		<repository>
+			<id>internal.repo</id>
+			<name>Temporary Staging Repository</name>
+			<url>file://${project.build.directory}/mvn-repo</url>
+		</repository>
+	</distributionManagement>
+
 	<properties>
+		<!-- github server corresponds to entry in ~/.m2/settings.xml -->
+		<github.global.server>github</github.global.server>
+
 		<java.version>1.7</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<powermock.version>1.4.12</powermock.version>
 		<org.slf4j.version>1.6.6</org.slf4j.version>
 		<apache.httpcomponents.version>4.1.1</apache.httpcomponents.version>
 		<spring.version>3.1.2.RELEASE</spring.version>
-		<cxf.version>2.6.2</cxf.version>
+		<cxf.version>2.7.3</cxf.version>
 	</properties>
 
 
@@ -237,6 +248,12 @@
 			<artifactId>cxf-rt-bindings-soap</artifactId>
 			<version>${cxf.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-databinding-xmlbeans</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+
 
 
 		<dependency>
@@ -249,6 +266,8 @@
 			<artifactId>jaxws-api</artifactId>
 			<version>2.2</version>
 		</dependency>
+
+
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-impl</artifactId>
@@ -267,8 +286,78 @@
 
 
 	<build>
-		<finalName>ws-client</finalName>
+		<resources>
+			<!-- required to include the generated schemaorg_apache_xmlbeans classes -->
+			<resource>
+				<directory>target/generated-sources/cxf-wsdl2java/soai/resources</directory>
+			</resource>
+		</resources>
+
 		<plugins>
+
+			<!-- site-maven-plugin is used to distribute jar file to github to be used as maven repository -->
+			<!-- march 30, 2013 - issue using this plugin to upload jar file to github. couldnt solve this -->
+	<!-- [ERROR] Failed to execute goal com.github.github:site-maven-plugin:0.7:site (default) on project ws-client: Error creating blob: Not Found (404) -> [Help 1] 
+		org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal com.github.github:site-maven-plugin:0.7:site (default) on project ws-client: Error 
+		creating blob: Not Found (404) at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:217) 
+		
+		followed the steps:
+		http://stackoverflow.com/questions/14013644/hosting-a-maven-repository-on-github
+		https://github.com/github/maven-plugins
+		
+		-->
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.7</version>
+				<configuration>
+					<message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
+					<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
+					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
+					<branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
+					<includes>
+						<include>**/*</include>
+					</includes>
+					<repositoryName>https://github.com/BlueDiamond/SOAPClient.git</repositoryName>      <!-- github repo name -->
+					<!-- <repositoryName>SOAPClient</repositoryName> -->      <!-- github repo name -->
+					<repositoryOwner>rpalanisamy</repositoryOwner>    <!-- github username -->
+				</configuration>
+				<executions>
+					<!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+				</executions>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -292,7 +381,7 @@
 									<version>2.2</version>
 								</artifactItem>
 							</artifactItems>
-							<outputDirectory>${project.build.directory}/endorsed</outputDirectory>
+							<outputDirectory>target/endorsed</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
@@ -307,18 +396,22 @@
 						<id>generate-sources</id>
 						<phase>generate-sources</phase>
 						<configuration>
-							<!-- <sourceRoot>${project.build.directory}/generated/cxf</sourceRoot> -->
-							<sourceRoot>${basedir}/src/main/java</sourceRoot>
+							<sourceRoot>target/generated-sources/cxf-wsdl2java/soai</sourceRoot>
 							<wsdlOptions>
 								<wsdlOption>
-									<wsdl>${basedir}/src/main/resources/spg_service.wsdl</wsdl>
+									<wsdl>src/main/resources/wsdl/User_Profile.wsdl</wsdl>
 									<extraargs>
-										<!-- <extraarg>-client</extraarg> -->
-										<extraarg>-impl</extraarg> 
-										<extraarg>-noAddressBinding</extraarg> 
-										<extraarg>-exsh</extraarg>
-										<extraarg>true</extraarg>
+										<extraarg>-verbose</extraarg>
+										<extraarg>-client</extraarg>
+										<extraarg>-server</extraarg>
+										<extraarg>-impl</extraarg>
 										<extraarg>-autoNameResolution</extraarg>
+										<extraarg>-db</extraarg>
+										<extraarg>xmlbeans</extraarg>
+										<!-- <extraarg>jaxb</extraarg> -->
+										<!-- <extraarg>-p</extraarg> <extraarg>http://soai.com/types=com.bd.soap.cxf.ws.connector.soai.types</extraarg> -->
+										<extraarg>-p</extraarg>
+										<extraarg>http://soai.com/userprofile/services=com.bd.soap.cxf.ws.connector.soai</extraarg>
 									</extraargs>
 								</wsdlOption>
 							</wsdlOptions>
@@ -330,6 +423,8 @@
 				</executions>
 			</plugin>
 		</plugins>
+
+
 		<pluginManagement>
 			<plugins>
 				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself. -->
@@ -340,19 +435,6 @@
 					<configuration>
 						<lifecycleMappingMetadata>
 							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.apache.cxf</groupId>
-										<artifactId>cxf-codegen-plugin</artifactId>
-										<versionRange>[2.5.5,)</versionRange>
-										<goals>
-											<goal>wsdl2java</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
 								<pluginExecution>
 									<pluginExecutionFilter>
 										<groupId>org.apache.maven.plugins</groupId>
@@ -370,25 +452,6 @@
 						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<configuration>
-						<compilerArguments>
-							<endorseddirs>${project.build.directory}/endorsed</endorseddirs>
-						</compilerArguments>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<configuration>
-						<forkMode>once</forkMode>
-						<argLine>-Djava.endorsed.dirs=${project.build.directory}/endorsed</argLine>
-					</configuration>
-				</plugin>
-
 			</plugins>
 		</pluginManagement>
 	</build>
