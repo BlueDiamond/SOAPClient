@@ -10,9 +10,15 @@ public final class UserProfileServiceClient {
 
 	public static void main(String args[]) throws java.lang.Exception {
 
+//		URL wsdlURL = new URL("http://localhost:8080/soap-service/UserProfileService?wsdl");
+		
 		URL wsdlURL = new URL("http://localhost:8080/soap-service/UserProfileService?wsdl");
 
 		UserProfileService userProfileService = new UserProfileService(wsdlURL);
+		
+		
+//		UserProfileService userProfileService = new UserProfileService();
+		
 		UserProfileServicePort port = userProfileService.getUserProfileServicePort();
 
 		System.out.println("Invoking getUserProfile...");
